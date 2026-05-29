@@ -7,9 +7,11 @@ function calcularCompra() {
     let valorOriginal = Number(valorElemento.value);
     let cupomDigitado = cupomElemento.value;
 
-    // =================================================================
-    // Complete os códigos a seguir com o que é pedido
-    // =================================================================
+    let desconto = 0;
+
+if (cupomDigitado.toUpperCase() === "PROMO10") {
+    desconto = 10;
+}
 
     
     // REGRA 1: Validação do Cupom de Desconto
@@ -30,7 +32,8 @@ function calcularCompra() {
     // Ela deve guardar o resultado de uma conta matemática simples:
     // O 'valorOriginal' do produto MENOS (-) o 'desconto' que você descobriu na Regra 1.
     
-    // ESCREVA SEU CÓDIGO AQUI:
+    // ESCREVA SEU CÓDIGO AQUI: // ESCREVA SEU CÓDIGO AQUI:
+let valorComDesconto = valorOriginal - desconto;
 
 
   
@@ -43,7 +46,12 @@ function calcularCompra() {
     // DICA: Use a estrutura -> if ( ... ) { ... } else { ... }
     let frete = 0;
     
-    // ESCREVA SEU IF / ELSE AQUI:
+    // ESCREVA SEU IF / ELSE AQUI: // ESCREVA SEU IF / ELSE AQUI:
+    if (valorComDesconto >= 100) {
+        frete = 0;
+    } else {
+        frete = 15;
+    }
 
 
    
@@ -52,7 +60,8 @@ function calcularCompra() {
     // Crie a última variável chamada 'totalFinal'.
     // Ela deve guardar a soma (+) do 'valorComDesconto' com a taxa do 'frete'.
     
-    // ESCREVA SEU CÓDIGO AQUI:
+    // ESCREVA SEU CÓDIGO AQUI: // ESCREVA SEU CÓDIGO AQUI:
+    let totalFinal = valorComDesconto + frete;
 
 
     // =================================================================
